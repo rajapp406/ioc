@@ -1,0 +1,12 @@
+<app-master-layout>
+    <div id="details">Mashroom Details
+        <input type="text" (input)="emitChange($event)"/>
+    </div>
+   
+    <div class="form">
+        <app-mashroom-form></app-mashroom-form>
+        {{data}}
+        <mat-slide-toggle (change)="changeToggle($event)">Slide me!</mat-slide-toggle>
+    </div>
+    asdfaBSFKJdfhsjkahs
+</app-master-layout>

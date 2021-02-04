@@ -1,0 +1,25 @@
+<mat-card style="display: flex;">
+    <div class="content">
+        <mat-card class="details">
+            <ng-content select="#details"></ng-content>
+        </mat-card>
+        <mat-card class="notes">
+            {{data.b}}
+            <app-notes></app-notes>
+        </mat-card>
+    </div>
+  <div class="sidebar">
+    <mat-card class="right">
+        <div>
+        <mat-form-field>
+            <mat-label>Toppings</mat-label>
+            <mat-select [formControl]="toppings">
+                <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+            </mat-select>
+            </mat-form-field>
+        </div>
+        <ng-content select=".form" #form></ng-content>
+    </mat-card>
+  </div>
+
+</mat-card>
